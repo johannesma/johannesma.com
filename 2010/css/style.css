@@ -1,0 +1,269 @@
+/* HTML5 ? Boilerplate */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+
+body { font:16px "Absara", Lucida Grande, Verdana, Arial, sans-serif; *font-size:small; *font:x-small; line-height:1.45em; }
+select, input, textarea, button { font:99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+html { overflow-y: scroll; }
+a:hover, a:active { outline: none; }
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+td { vertical-align: top; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+textarea { overflow: auto; } 
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+body, select, input, textarea { color: #333; }
+a, a:active, a:visited { color:#7d152b; text-decoration: none; }
+a:hover { color:#7d152b; text-decoration: underline; }
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+.clearfix { display: block; }
+
+/*fonts*/
+@font-face {
+    font-family: 'AbsaraSans';
+    src: url('../fonts/absarasanstf-regularsc-webfont.eot');
+    src: url('../fonts/absarasanstf-regularsc-webfont.eot?iefix') format('eot'),
+         url('../fonts/absarasanstf-regularsc-webfont.woff') format('woff'),
+         url('../fonts/absarasanstf-regularsc-webfont.ttf') format('truetype'),
+         url('../fonts/absarasanstf-regularsc-webfont.svg#webfontJukSfWWP') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Absara';
+    src: url('../fonts/absaratf-regular-webfont.eot');
+    src: url('../fonts/absaratf-regular-webfont.eot?iefix') format('eot'),
+         url('../fonts/absaratf-regular-webfont.woff') format('woff'),
+         url('../fonts/absaratf-regular-webfont.ttf') format('truetype'),
+         url('../fonts/absaratf-regular-webfont.svg#webfontruZrDRtw') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ /* Primary Styles
+    Author: Johannes Ma
+ */
+
+/*Body/Universal Styles--------------------------------------------------------------*/
+
+body {background:url(../images/shared/bg-body.jpg) left top;}
+
+.wrap, hgroup#sitename, section.primary, footer {position: relative; display: block; width: 924px; margin: 0 auto 3.5em;}
+.wrap {margin: 0 auto;}
+.mb {display:none;}
+
+header#top {background: #444; /* old browsers */
+background: -moz-linear-gradient(top, #444 0%, #161616 100%); /* firefox */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444), color-stop(100%,#161616)); /* webkit */
+width: 100%; height: 3.375em; color: #fff; -webkit-box-shadow: 0px 1px 5px #333; -moz-box-shadow: -5px 1px 5px #333; box-shadow: 0px 1px 5px #333;}
+
+header#top h1 {font-size: 1.125em; float: left; padding: 1em 0;}
+
+nav#main {float: right;}
+nav#main ul {list-style: none; margin: 0;}
+nav#main li {display: block; width: auto; float: left; font-family: 'AbsaraSans', Tacoma, sans-serif; font-size: 1em;}
+nav#main li a {display: block; color: #fff; padding: 1.125em 1.309em .83em; border-left: 1px solid #000;}
+nav#main li#n-c a {border-right: 1px solid #000;}
+nav#main li a:hover {background: #262626; /* old browsers */
+background: -moz-linear-gradient(top, #262626 0%, #000000 100%); /* firefox */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#262626), color-stop(100%,#000000)); /* webkit */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#000000',GradientType=0 ); /* ie */
+text-decoration: none;}
+
+hgroup#sitename h2 {clear: both; width: 434px; height: 12em; background:url(../images/shared/h-badjo.png) left 60px no-repeat; }
+.ie7 hgroup#sitename h2 {height: 13em;}
+
+section.primary, footer {border-top: 1px solid #a1a1a1; padding-top: 2.832em;}
+section.secondary {padding-top: 1.232em;}
+
+section.primary hgroup {margin-bottom: 1.6em;}
+section.primary hgroup h2 {font-size: 1.875em; line-height: 1em;}
+section.primary hgroup h4 {font-family: 'AbsaraSans', Tacoma, sans-serif; text-transform: lowercase;}
+
+/*footer*/
+footer {padding-top: 1.6em; height: 80px;}
+p#sign a {float: left; width: 123px; height: 80px; background: url(../images/shared/icon-avail.png) left top no-repeat;}
+p#cr {float: right;}
+
+
+/*work*/
+article.block {position: relative; float: left; width: 273px; margin: 0 25px 12px -.5em; padding: 12px 12px 0; -moz-border-radius: 2px;
+border-radius: 2px;}
+article.block.on {background: #fff;-webkit-box-shadow: 0px 0px 3px #bdbdbd;-moz-box-shadow: 0px 0px 3px #bdbdbd;box-shadow: 0px 0px 3px #bdbdbd;}
+
+article#gs.block, article#cpc.block {margin-right: 0;}
+article.block h3 a {
+	display: block;
+	font-family: 'AbsaraSans', Tacoma, sans-serif; 
+	font-size: 1.375em; color: #111; text-decoration: none;
+	padding: 185px 0 8px;}
+
+article.block p	 {width: 273px; margin-bottom: 1.3em;}
+article.block p a.view {display: inline-block; padding-right: 28px; } 
+article.block p a.view:hover {text-decoration: underline;} 
+	
+article.block a img {
+	position: absolute; top: 12px; left: 12px; 
+	display: block; width:273px; height:161px; 
+	border: 1px solid #b1b1b1;
+	overflow: hidden;}
+
+/*about*/
+section#about {background: url(../images/shared/bg-about.png) 660px 100px no-repeat;}
+section#about p {width: 69.8%; margin-bottom: 1.6em;}
+section#about h3 {font-size: 1.875em; line-height: 1em; margin-bottom: .6em;}
+
+section#cap ul {margin: 0 0 1.6em 16px;}
+section#cap li {margin: 0 0 .3em;}
+section#cap h3, section#contact h3 {font-family: 'AbsaraSans', Tacoma, sans-serif; font-size: 1.375em;}
+section#cap a {display: inline-block; padding-right: 20px; background: url(../images/shared/icon-pdf.png) right 3px no-repeat;}
+
+/*contact*/
+section#contact {min-height: 610px; height: auto; margin-bottom: 0;}
+section#contact ul {margin: .6em 0 1.6em 0; list-style: none;}
+section#contact li {margin: 0 0 .3em;}
+section#contact #social {width: 540px; height: 280px; background:url(../images/shared/bg-quote.png) left top no-repeat; padding: 15px 147px 210px 20px; margin-left: 200px;}
+/*tumblr*/
+section#contact #social article#tumblr-badge {position: relative; float: left; width: 250px; height: 285px; overflow: hidden; margin: 5px 10px 0 0; padding-right: 15px; border-right: 2px dashed #eee;}
+section#contact #social article#tumblr-badge h4 {font-family: 'AbsaraSans', Tacoma, sans-serif; margin-bottom: 10px;}
+section#contact #social article#tumblr-badge p {font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif; font-size: 12px; line-height: 1.25em;}
+section#contact #social article#tumblr-badge p.tblr {font-family:"Absara", Lucida Grande, Verdana, Arial, sans-serif;font-size: .8em; margin:0;}
+section#contact #social article#tumblr-badge ol {height: 235px; overflow: hidden; list-style:none;margin-left: 0;}
+section#contact #social article#tumblr-badge img {width:250px;}
+
+
+/*twitter*/
+section#contact #social article#tw {float: left; position: relative;}
+section#contact #social .twtr-widget { font-family:"Absara", Lucida Grande, Verdana, Arial, sans-serif; }
+section#contact #social h4.t-hd {font-family: 'AbsaraSans', Tacoma, sans-serif; margin: 5px 0 0 10px;}
+section#contact #social h5 {font-size: .8em; position: absolute; left: 10px; top: 270px;}
+section#contact #social #twtr-widget-1 {float:left; width: 250px;margin-top:1px;}
+section#contact #social .twtr-widget em {margin-top: 3px;}
+section#contact #social .twtr-widget .twtr-hd, section#contact #social .twtr-widget .twtr-ft {display: none;}
+
+/* 
+ * print styles
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; } h2, h3{ page-break-after: avoid; }
+  nav#msection, #work {display:none;}
+}
+
+/*Media queries for responsive design*/
+
+@media all and (orientation:portrait)  { 
+  /* Style adjustments for portrait mode goes here 768 */
+  .mb {display: block;}
+  .ph {display: none;}
+  .wrap, hgroup#sitename, section.primary, footer {width: 90%; margin: 0 5%;}
+  nav#main li:first-child {margin-left: 0;}
+  hgroup#sitename h2 {width: 100%; height: 12em; background:url(../images/shared/h-badjo-sm.png) left 60px no-repeat; }
+  article#tmw, article#cpc {display: none;} 
+  article#gs.block {margin-right: 25px;} 
+  section#about p {width: 90%;}
+  article.block p {width: 100%;}
+  section#contact {}
+  section#contact #social {padding: 15px 105px 210px 20px; margin-left: 0px;}
+  p#sign a {float: none; margin-bottom: 1em;}
+  p#cr {float: none;}
+  p.rtt {position:absolute; top: .7em; right: 0; z-index: 1234;}
+  section#about {background:none;}
+  section#about p.rtt { display: block; text-align: right;}
+  footer p.rtt {position:absolute; top: 1em; right: 0; z-index: 1234;}
+}
+
+@media all and (orientation:landscape) { 
+  /* Style adjustments for landscape mode goes here */
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-width: 480px) {
+  .dt {display:none;}
+  .mb {display: block;}
+  .wrap, hgroup#sitename, section.primary, footer {width: 90%; margin: 0 5%;}
+  header#top {height: 7.2em; background: #000;}
+  header#top h1 {float: none;}
+  nav#main {float: none; margin-left: -1.275em;}
+  nav#main li {border:0;}
+  hgroup#sitename h2 {width: 100%; height: 12em; background:url(../images/shared/h-badjo-sm.png) left 60px no-repeat; }
+  article#tmw, article#kings, article#cpc, aside#social {display: none;} 
+  section#about p {width: 90%;}
+  article.block p {width: 100%;} 
+  section#cap a {background: url(../images/shared/icon-pdf.png) right 25px no-repeat;}
+  section#contact {height: 600px; background:url(../images/shared/bg-quote-m.png) left bottom no-repeat;}
+  p#sign a {float: none; margin-bottom: 1em;}
+  p#cr {float: none;}
+  p.rtt {position:absolute; top: .7em; right: 0; z-index: 1234;}
+  section#about p.rtt { display: block; text-align: right;}
+  footer p.rtt {position:absolute; top: 1em; right: 0; z-index: 1234;}
+  
+  /* Prevent iOS, WinMobile from adjusting font size */
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+}
+
