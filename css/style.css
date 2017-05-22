@@ -8,7 +8,7 @@ audio:not([controls]) { display: none; }
 
 html { background: #fdfafa; font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { margin: 0; font-size: 16px; line-height: 1.4; }
-body, button, input, select, textarea { font-family: "adelle", serif; color: #333; text-rendering: optimizeLegibility; }
+body, button, input, select, textarea { font-family: "roboto", sans-serif; color: #333; text-rendering: optimizeLegibility; }
 
 ::-moz-selection { background: #ebebeb; color: #333; text-shadow: none; }
 ::selection { background: #ebebeb; color: #333; text-shadow: none; }
