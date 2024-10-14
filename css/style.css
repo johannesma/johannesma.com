@@ -71,6 +71,8 @@ h1, h2, h3, h4, h5, p {
 	font-weight: 300;
 	margin: 0;}
 
+ul {margin-bottom: 1.5em;}
+
 	p, li {
 		font-weight: normal;
 		margin-bottom: 1.25em;}
