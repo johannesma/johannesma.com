@@ -9,3 +9,4 @@ Disallow: /images/
 Disallow: /download/
 Disallow: /test/
 Disallow: /404.html
+Disallow: /ceramics/
