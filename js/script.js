@@ -16,10 +16,12 @@ c.width = width;
 c.height = height;
 
 //params
-var speed = 10,
-	  size = 1,
+var speed = 4,
+	  size = 2,
+	  turnSmoothing = 0.22,
+	  colors = ['#708090', '#87977B'],
 	  boids = [],
-	  totalBoids = 200;
+	  totalBoids = 100;
 
 var init = function() {
 
@@ -32,7 +34,7 @@ var init = function() {
         x: Math.random() * 2 - 1,
         y: Math.random() * 2 - 1
       },
-      c: 'rgba(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ', 1.0)'
+      c: colors[Math.floor(Math.random() * colors.length)]
     });
   }
   setInterval(update, 40);
@@ -62,19 +64,34 @@ var checkWallCollisions = function(index) {
 
 var addForce = function(index, force) {
 
-  boids[index].v.x += force.x;
-  boids[index].v.y += force.y;
+  var targetX = boids[index].v.x + force.x;
+  var targetY = boids[index].v.y + force.y;
 
   magnitude = calculateDistance({
     x: 0,
     y: 0
   }, {
-    x: boids[index].v.x,
-    y: boids[index].v.y
+    x: targetX,
+    y: targetY
   });
 
-  boids[index].v.x = boids[index].v.x / magnitude;
-  boids[index].v.y = boids[index].v.y / magnitude;
+  if (magnitude === 0) {
+    return;
+  }
+
+  targetX /= magnitude;
+  targetY /= magnitude;
+
+  boids[index].v.x += (targetX - boids[index].v.x) * turnSmoothing;
+  boids[index].v.y += (targetY - boids[index].v.y) * turnSmoothing;
+
+  magnitude = calculateDistance({
+    x: 0,
+    y: 0
+  }, boids[index].v);
+
+  boids[index].v.x /= magnitude;
+  boids[index].v.y /= magnitude;
 }
 
 var applyForces = function(index) {
